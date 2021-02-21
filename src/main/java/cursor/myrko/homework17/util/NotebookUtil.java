@@ -2,22 +2,15 @@ package cursor.myrko.homework17.util;
 
 import cursor.myrko.homework17.entities.Notebook;
 import cursor.myrko.homework17.repositories.NotebookRepository;
-import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.aspectj.weaver.ast.Not;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.OrderBy;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
@@ -44,8 +37,8 @@ public class NotebookUtil implements CommandLineRunner {
         System.out.println();
     }
 
-    public List<Notebook> initNotebookList(){
-       return new ArrayList<>(Arrays.asList(
+    public List<Notebook> initNotebookList() {
+        return new ArrayList<>(Arrays.asList(
                 new Notebook().setModel("Probook 440 G6").setManufacturer("HP").setPocessor("Intel Core I5").setMemory(8)
                         .setUsed(false).setCaseType("metal").setPrice(24500).setLocalDate(LocalDate.of(2019, 10, 12)),
                 new Notebook().setModel("Tecra A10").setManufacturer("Toshiba").setPocessor("Intel Core I5").setMemory(8)

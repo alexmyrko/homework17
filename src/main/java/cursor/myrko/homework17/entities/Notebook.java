@@ -1,9 +1,8 @@
 package cursor.myrko.homework17.entities;
 
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import lombok.experimental.Accessors;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -13,27 +12,27 @@ import java.time.LocalDate;
 @Accessors(chain = true)
 public class Notebook {
 
-@Id
-@GeneratedValue(strategy = GenerationType.AUTO)
-@Column(name = "notebook_id")
-private Integer id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "notebook_id")
+    private Integer id;
 
-private String model;
+    private String model;
 
-String manufacturer;
+    String manufacturer;
 
-private String pocessor;
+    private String pocessor;
 
-@Column(name = "memory_capacity")
-private Integer memory;
+    @Column(name = "memory_capacity")
+    private Integer memory;
 
-private boolean isUsed;
+    private boolean isUsed;
 
-@Column(name = "case_type")
-private String caseType;
+    @Column(name = "case_type")
+    private String caseType;
 
-private Integer price;
+    private Integer price;
 
-@Column(name = "manufacture_date")
-private LocalDate localDate;
+    @Column(name = "manufacture_date")
+    private LocalDate localDate;
 }

@@ -9,5 +9,6 @@ import java.util.List;
 @Repository
 public interface NotebookRepository extends JpaRepository<Notebook, Integer> {
     List<Notebook> findAllByMemoryGreaterThan(int n);
+
     List<Notebook> findAllByIsUsedIsTrue();
 }
